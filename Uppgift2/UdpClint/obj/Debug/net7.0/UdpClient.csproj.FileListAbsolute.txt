@@ -1,0 +1,17 @@
+C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClint\bin\Debug\net7.0\UdpClient.exe
+C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClint\bin\Debug\net7.0\UdpClient.deps.json
+C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClint\bin\Debug\net7.0\UdpClient.runtimeconfig.json
+C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClint\bin\Debug\net7.0\UdpClient.dll
+C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClint\bin\Debug\net7.0\UdpClient.pdb
+C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClint\obj\Debug\net7.0\UdpClient.csproj.AssemblyReference.cache
+C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClint\obj\Debug\net7.0\UdpClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClint\obj\Debug\net7.0\UdpClient.AssemblyInfoInputs.cache
+C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClint\obj\Debug\net7.0\UdpClient.AssemblyInfo.cs
+C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClint\obj\Debug\net7.0\UdpClient.csproj.CoreCompileInputs.cache
+C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClint\obj\Debug\net7.0\UdpClient.dll
+C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClint\obj\Debug\net7.0\refint\UdpClient.dll
+C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClint\obj\Debug\net7.0\UdpClient.pdb
+C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClint\obj\Debug\net7.0\UdpClient.genruntimeconfig.cache
+C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClint\obj\Debug\net7.0\ref\UdpClient.dll
+C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClint\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClint\obj\Debug\net7.0\UdpClient.csproj.CopyComplete
