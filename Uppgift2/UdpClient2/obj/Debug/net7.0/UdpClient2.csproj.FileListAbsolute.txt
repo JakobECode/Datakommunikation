@@ -13,3 +13,5 @@ C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClient2\obj\D
 C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClient2\obj\Debug\net7.0\UdpClient2.pdb
 C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClient2\obj\Debug\net7.0\UdpClient2.genruntimeconfig.cache
 C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClient2\obj\Debug\net7.0\ref\UdpClient2.dll
+C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClient2\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Jakob\Desktop\Datakommunikation och säkerhet\Uppgift2\UdpClient2\obj\Debug\net7.0\UdpClient2.csproj.CopyComplete

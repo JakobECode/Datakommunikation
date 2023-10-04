@@ -1,0 +1,15 @@
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncryptingDecrypting\bin\Debug\net7.0\EncryptingDecrypting.exe
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncryptingDecrypting\bin\Debug\net7.0\EncryptingDecrypting.deps.json
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncryptingDecrypting\bin\Debug\net7.0\EncryptingDecrypting.runtimeconfig.json
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncryptingDecrypting\bin\Debug\net7.0\EncryptingDecrypting.dll
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncryptingDecrypting\bin\Debug\net7.0\EncryptingDecrypting.pdb
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncryptingDecrypting\obj\Debug\net7.0\EncryptingDecrypting.csproj.AssemblyReference.cache
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncryptingDecrypting\obj\Debug\net7.0\EncryptingDecrypting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncryptingDecrypting\obj\Debug\net7.0\EncryptingDecrypting.AssemblyInfoInputs.cache
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncryptingDecrypting\obj\Debug\net7.0\EncryptingDecrypting.AssemblyInfo.cs
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncryptingDecrypting\obj\Debug\net7.0\EncryptingDecrypting.csproj.CoreCompileInputs.cache
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncryptingDecrypting\obj\Debug\net7.0\EncryptingDecrypting.dll
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncryptingDecrypting\obj\Debug\net7.0\refint\EncryptingDecrypting.dll
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncryptingDecrypting\obj\Debug\net7.0\EncryptingDecrypting.pdb
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncryptingDecrypting\obj\Debug\net7.0\EncryptingDecrypting.genruntimeconfig.cache
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncryptingDecrypting\obj\Debug\net7.0\ref\EncryptingDecrypting.dll

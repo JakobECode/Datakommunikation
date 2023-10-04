@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ThF9dXH9nNlyxG0rJMLMX1KlCUsVlusPIm9YTlWJy/VfXu7pXMYrUWap36HfFEn+aO6ecu9RCUU9HDoX8iFWxQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Jakob\\Desktop\\Datakommunikation och säkerhet\\Uppgift3\\Clint\\Clint\\Clint.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jakob\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

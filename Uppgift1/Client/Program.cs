@@ -18,9 +18,6 @@ namespace Client
 					Color = "Pink"
 				};
 				// Create a TcpClient.
-				// Note, for this client to work you need to have a TcpServer
-				// connected to the same address as specified by the server, port
-				// combination.
 				Int32 port = 1111;
 
 				// Prefer a using declaration to ensure the instance is Disposed later.
@@ -39,7 +36,6 @@ namespace Client
 				Console.WriteLine("Sent: {0}", jsonBil);
 
 				// Receive the server response.
-
 				// Buffer to store the response bytes.
 				data = new Byte[256];
 
@@ -50,11 +46,6 @@ namespace Client
 				Int32 bytes = stream.Read(data, 0, data.Length);
 				responseData = System.Text.Encoding.ASCII.GetString(data, 0, bytes);
 				Console.WriteLine("Received: {0}", responseData);
-
-				// Explicit close is not necessary since TcpClient.Dispose() will be
-				// called automatically.
-				// stream.Close();
-				// client.Close();
 			}
 			catch (ArgumentNullException e)
 			{

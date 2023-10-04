@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\UdpClint",
-    "\\UdpServer"
+    "\\UdpClient2",
+    "\\UdpClint"
   ],
-  "SelectedNode": "\\UdpServer\\Program.cs",
+  "SelectedNode": "\\UdpClient2",
   "PreviewInSolutionExplorer": false
 }

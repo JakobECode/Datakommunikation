@@ -1,0 +1,17 @@
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\Serializering\bin\Debug\net7.0\Serializering.exe
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\Serializering\bin\Debug\net7.0\Serializering.deps.json
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\Serializering\bin\Debug\net7.0\Serializering.runtimeconfig.json
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\Serializering\bin\Debug\net7.0\Serializering.dll
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\Serializering\bin\Debug\net7.0\Serializering.pdb
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\Serializering\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\Serializering\obj\Debug\net7.0\Serializering.csproj.AssemblyReference.cache
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\Serializering\obj\Debug\net7.0\Serializering.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\Serializering\obj\Debug\net7.0\Serializering.AssemblyInfoInputs.cache
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\Serializering\obj\Debug\net7.0\Serializering.AssemblyInfo.cs
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\Serializering\obj\Debug\net7.0\Serializering.csproj.CoreCompileInputs.cache
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\Serializering\obj\Debug\net7.0\Serializering.csproj.CopyComplete
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\Serializering\obj\Debug\net7.0\Serializering.dll
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\Serializering\obj\Debug\net7.0\refint\Serializering.dll
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\Serializering\obj\Debug\net7.0\Serializering.pdb
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\Serializering\obj\Debug\net7.0\Serializering.genruntimeconfig.cache
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\Serializering\obj\Debug\net7.0\ref\Serializering.dll

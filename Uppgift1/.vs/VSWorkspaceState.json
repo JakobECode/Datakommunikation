@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Client",
+    "\\Server"
   ],
+  "SelectedNode": "\\Server\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

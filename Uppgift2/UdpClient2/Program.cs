@@ -2,48 +2,47 @@
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+using Newtonsoft.Json;
 
-class Client2
+class Program
 {
-	static async Task Main(string[] args)
+	static void Main()
 	{
-		int localPort = 2222;  // Lokal port
-		int remotePort = 1111; // Port till Client1
-		string remoteIPAddress = "127.0.0.1"; //Localhost ipadress
-
-		UdpClient udpClient = new UdpClient(localPort);
-		IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse(remoteIPAddress), remotePort);
-
-		// Tar emot och visar meddelanden från Client1
-		Task receiveTask = Task.Run(async () =>
-		{
-			while (true)
-			{
-				UdpReceiveResult receiveResult = await udpClient.ReceiveAsync();
-				byte[] data = receiveResult.Buffer;
-				string message = Encoding.ASCII.GetString(data);
-				Console.WriteLine("Them: " + message);
-			}
-		});
+		// Skapa en UDP-mottagare och lyssna på portnummer 5000
+		UdpClient udpListener = new UdpClient(5000);
+		IPEndPoint endPoint = new IPEndPoint(IPAddress.Any, 5000);
 
 		try
 		{
-			while (true)
-			{
-				string message = Console.ReadLine()!;
+			Console.WriteLine("Väntar på data från klienten...");
 
-				if (!string.IsNullOrEmpty(message))
-				{
-					byte[] data = Encoding.ASCII.GetBytes(message);
-					await udpClient.SendAsync(data, data.Length, endPoint);
-				}
-			}
+			// Lyssna på inkommande data
+			byte[] receivedData = udpListener.Receive(ref endPoint);
+
+			// Konvertera byte-array till JSON
+			var json = Encoding.UTF8.GetString(receivedData);
+
+			// Deserialisera JSON till användarobjekt
+			User user = JsonConvert.DeserializeObject<User>(json);
+
+			Console.WriteLine("Data mottagen från klienten:");
+			Console.WriteLine("Användarnamn: " + user.Username);
+			Console.WriteLine("Ålder: " + user.Age);
 		}
 		catch (Exception e)
 		{
-			Console.WriteLine("Error: " + e.Message);
+			Console.WriteLine("Fel vid mottagning: " + e.Message);
+		}
+		finally
+		{
+			udpListener.Close();
 		}
 	}
+}
+
+// Användarobjekt som deserialiseras från JSON
+class User
+{
+	public string Username { get; set; }
+	public int Age { get; set; }
 }

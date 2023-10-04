@@ -1,0 +1,15 @@
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncodingDecoding\bin\Debug\net7.0\EncodingDecoding.exe
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncodingDecoding\bin\Debug\net7.0\EncodingDecoding.deps.json
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncodingDecoding\bin\Debug\net7.0\EncodingDecoding.runtimeconfig.json
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncodingDecoding\bin\Debug\net7.0\EncodingDecoding.dll
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncodingDecoding\bin\Debug\net7.0\EncodingDecoding.pdb
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncodingDecoding\obj\Debug\net7.0\EncodingDecoding.csproj.AssemblyReference.cache
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncodingDecoding\obj\Debug\net7.0\EncodingDecoding.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncodingDecoding\obj\Debug\net7.0\EncodingDecoding.AssemblyInfoInputs.cache
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncodingDecoding\obj\Debug\net7.0\EncodingDecoding.AssemblyInfo.cs
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncodingDecoding\obj\Debug\net7.0\EncodingDecoding.csproj.CoreCompileInputs.cache
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncodingDecoding\obj\Debug\net7.0\EncodingDecoding.dll
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncodingDecoding\obj\Debug\net7.0\refint\EncodingDecoding.dll
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncodingDecoding\obj\Debug\net7.0\EncodingDecoding.pdb
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncodingDecoding\obj\Debug\net7.0\EncodingDecoding.genruntimeconfig.cache
+C:\Users\Jakob\Desktop\DataKommunikationLab\DataLab\EncodingDecoding\obj\Debug\net7.0\ref\EncodingDecoding.dll

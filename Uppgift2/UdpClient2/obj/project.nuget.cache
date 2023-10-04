@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "TTUjocKSXGtekL7JFt2+no1tlTKMrhXugSt1kZUKmtMwYcgz7DFCHfVG49fTSVZ5uv1hg8oeGkg8Y1EWqq0//g==",
+  "dgSpecHash": "yx9LGLPxe7YgxlOBFLq6+5Z8KNCQ+MDkmfbTte4cE6j/lQ12ql3UJk7eZS+ZGsH8iiAbMe6PcvYstq+Mq03Z1A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jakob\\Desktop\\Datakommunikation och säkerhet\\Uppgift2\\UdpClient2\\UdpClient2.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Jakob\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

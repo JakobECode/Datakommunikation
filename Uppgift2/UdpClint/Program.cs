@@ -2,66 +2,47 @@
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-class MyData
+class Program
 {
-	public string Name { get; set; }
-	public int Age { get; set; }
-}
-
-class Client2
-{
-	static async Task Main(string[] args)
+	static void Main()
 	{
-		int localPort = 1111;  // Lokal port
-		int remotePort = 2222; // Port till Client1
-		string remoteIPAddress = "127.0.0.1"; // Localhost ipadress
+		// Skapa en UDP-klient och definiera serverns IP-adress och portnummer
+		UdpClient udpClient = new UdpClient();
+		IPAddress serverIP = IPAddress.Parse("127.0.0.1");
+		int serverPort = 5000;
 
-		UdpClient udpClient = new UdpClient(localPort);
-		IPEndPoint endPoint = new IPEndPoint(IPAddress.Parse(remoteIPAddress), remotePort);
-
-		// Tar emot och visar meddelanden från Client1
-		Task receiveTask = Task.Run(async () =>
-		{
-			while (true)
-			{
-				UdpReceiveResult receiveResult = await udpClient.ReceiveAsync();
-				byte[] data = receiveResult.Buffer;
-
-				// Deserialisera objektet från byte-array
-				string jsonData = Encoding.ASCII.GetString(data);
-				MyData receivedData = JsonConvert.DeserializeObject<MyData>(jsonData);
-
-				Console.WriteLine("Them: Name=" + receivedData.Name + ", Age=" + receivedData.Age);
-			}
-		});
+		// Skapa en användarobjekt som ska skickas till servern
+		User user = new User { Username = "Jake", Age = 30 };
 
 		try
 		{
-			while (true)
-			{
-				Console.WriteLine("Press Enter to send the object...");
-				Console.ReadLine(); // Vänta på Enter-tangenttryckning
+			// Serialisera användarobjektet till JSON
+			var json = JsonConvert.SerializeObject(user);
 
-				// Skapa ett objekt att skicka
-				MyData myData = new MyData
-				{
-					Name = "John",
-					Age = 30
-				};
+			// Konvertera JSON till byte-array
+			byte[] data = Encoding.UTF8.GetBytes(json);
 
-				// Serialisera objektet till JSON
-				string jsonData = JsonConvert.SerializeObject(myData);
-				byte[] data = Encoding.ASCII.GetBytes(jsonData);
+			// Skicka data till servern
+			udpClient.Send(data, data.Length, new IPEndPoint(serverIP, serverPort));
 
-				await udpClient.SendAsync(data, data.Length, endPoint);
-			}
+			Console.WriteLine("Data skickades till servern: " + json);
 		}
 		catch (Exception e)
 		{
-			Console.WriteLine("Error: " + e.Message);
+			Console.WriteLine("Fel vid sändning: " + e.Message);
+		}
+		finally
+		{
+			udpClient.Close();
 		}
 	}
+}
+
+// Användarobjekt som ska serialiseras till JSON
+class User
+{
+	public string Username { get; set; }
+	public int Age { get; set; }
 }
