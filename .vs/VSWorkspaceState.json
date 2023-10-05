@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Uppgift1",
+    "\\Uppgift1\\Client",
+    "\\Uppgift1\\Server",
+    "\\Uppgift2",
+    "\\Uppgift2\\UdpClient2"
   ],
+  "SelectedNode": "\\Uppgift1\\Server\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -9,7 +9,7 @@ class Program
 	static void Main()
 	{
 		// Skapa en UDP-klient och definiera serverns IP-adress och portnummer
-		UdpClient udpClient = new UdpClient();
+		using UdpClient udpClient = new UdpClient();
 		IPAddress serverIP = IPAddress.Parse("127.0.0.1");
 		int serverPort = 5000;
 

@@ -9,7 +9,7 @@ class Program
 	static void Main()
 	{
 		// Skapa en UDP-mottagare och lyssna på portnummer 5000
-		UdpClient udpListener = new UdpClient(5000);
+		using UdpClient udpListener = new UdpClient(5000);
 		IPEndPoint endPoint = new IPEndPoint(IPAddress.Any, 5000);
 
 		try
@@ -23,7 +23,7 @@ class Program
 			var json = Encoding.UTF8.GetString(receivedData);
 
 			// Deserialisera JSON till användarobjekt
-			User user = JsonConvert.DeserializeObject<User>(json);
+			User user = JsonConvert.DeserializeObject<User>(json)!;
 
 			Console.WriteLine("Data mottagen från klienten:");
 			Console.WriteLine("Användarnamn: " + user.Username);

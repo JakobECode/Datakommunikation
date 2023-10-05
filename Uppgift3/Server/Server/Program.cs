@@ -47,16 +47,25 @@ class Program
 				}
 				while (!result.EndOfMessage);
 
-				// Deserialisera JSON-meddelande till ett användarobjekt
-				string receivedMessage = messageData.ToString();
-				User user = JsonConvert.DeserializeObject<User>(receivedMessage)!;
+				if(result.MessageType == WebSocketMessageType.Text)
+				{
+					// Deserialisera JSON-meddelande till ett användarobjekt
+					string receivedMessage = messageData.ToString();
+					User user = JsonConvert.DeserializeObject<User>(receivedMessage)!;
 
-				Console.WriteLine($"Meddelande från klient: {user.Username}, Ålder: {user.Age}");
+					Console.WriteLine($"Meddelande från klient: {user.Username}, Ålder: {user.Age}");
 
-				// Skicka svar tillbaka till klienten
-				string responseMessage = JsonConvert.SerializeObject(user);
-				buffer = Encoding.UTF8.GetBytes(responseMessage);
-				await webSocket.SendAsync(new ArraySegment<byte>(buffer), WebSocketMessageType.Text, true, CancellationToken.None);
+					// Skicka svar tillbaka till klienten
+					string responseMessage = JsonConvert.SerializeObject(user);
+					buffer = Encoding.UTF8.GetBytes(responseMessage);
+					await webSocket.SendAsync(new ArraySegment<byte>(buffer), WebSocketMessageType.Text, true, CancellationToken.None);
+				}
+				else if(result.MessageType == WebSocketMessageType.Close)
+				{
+					Console.WriteLine("Socket has closed.");
+					break;
+				}
+				
 			}
 		}
 		catch (Exception e)
