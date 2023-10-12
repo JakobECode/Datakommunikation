@@ -1,0 +1,29 @@
+﻿@page
+@model IndexModel
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Data</title>
+</head>
+<body>
+    <h1>Temperature Data</h1>
+    <ul id="temperature-list"></ul>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.12/signalr.min.js"></script>
+    <script>
+
+        await Clients.All.SendAsync("UpdateTemperatureData", deviceId, decryptedTemperature);
+
+        connection.on("UpdateTemperatureData", function (deviceId, temperature) {
+            var listItem = document.createElement("li");
+            listItem.textContent = "Device: " + deviceId + ", Temperature: " + temperature + "°C";
+            document.getElementById("temperature-list").appendChild(listItem);
+        });
+
+        connection.start().catch(function (err) {
+            return console.error(err.toString());
+        });
+    </script>
+</body>
+</html>
+

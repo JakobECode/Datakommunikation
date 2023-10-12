@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "PMMahF3xG3O9N/I35UDgn2g6g1rHvQnQhg6WfiemNJ4=",
+  "Source": "TempSignalRServer",
+  "BasePath": "_content/TempSignalRServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
