@@ -3,15 +3,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddSignalR();
-builder.Services.AddCors(options =>
-{
-	options.AddPolicy("MyAllowSpecificOrigins", p =>
-	{
-		p.WithOrigins("https://localhost:7045/TemperatureHub")
-					  .AllowAnyMethod()
-					  .AllowAnyHeader();
-	});
-});
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -26,14 +19,14 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-app.UseCors("MyAllowSpecificOrigins");
 app.UseAuthorization();
 
 app.MapRazorPages();
 app.Use(async (context, next) =>
 {
 
-	context.Response.Headers.Add("Content-Security-Policy", "default-src 'self'; script-src-elem https://cdnjs.cloudflare.com 'self' 'unsafe-inline'; ");
+	context.Response.Headers.Add("Content-Security-Policy", "default-src 'self'; script-src-elem https://cdnjs.cloudflare.com/ 'self' " +
+		"'unsafe-inline'; connect-src 'self' https://localhost:7045/ wss://localhost:7045");
 	await next();
 });
 

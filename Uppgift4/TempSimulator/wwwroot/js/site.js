@@ -1,29 +1,23 @@
-﻿// Skapar en ny SignalR-anslutning med den angivna URL:en.
-const connection = new signalR.HubConnectionBuilder()
-    .withUrl("/TemperatureHub")
-    .configureLogging(signalR.LogLevel.Information)  // Lägger till loggningsinformation, kan vara användbart för felsökning.
+﻿const connection = new signalR.HubConnectionBuilder()
+    .withUrl("https://localhost:7045/TemperatureHub")
+    .withAutomaticReconnect()
     .build();
 
-// Definiera en händelse när ett meddelande mottas från servern.
-connection.on("PublishToClient", function (forecast) {
-    if (forecast && typeof forecast === 'object') { // Validera mottagen data.
-        // Visar mottagen temperaturdata i webbläsarens konsol.
-        console.log(forecast);
-
-        // Här kan du också lägga till logik för att visa datan på ditt webbgränssnitt, t.ex. uppdatera ett HTML-element.
-    } else {
-        console.error("Received invalid forecast data from the server.");
-    }
-});
-
-// Försöker starta SignalR-anslutningen.
+    // Försöker starta SignalR-anslutningen.
 connection.start()
-    .then(() => {
+    .then(function(){
         console.log("Successfully connected to the hub.");
     })
-    .catch((error) => {
-        console.error("Error while connecting to the hub:", error);
+    .catch(function(){
+        console.error("Error while connecting to the hub:", error.toString());
     });
+
+// Definiera en händelse när ett meddelande mottas från servern.
+connection.on("ReceiveTempData", function (forecast) {
+   console.log(forecast)
+});
+
+
 
 // Definiera en händelse när anslutningen avbryts.
 connection.onclose(async () => {

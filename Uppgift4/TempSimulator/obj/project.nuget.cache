@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iirbcHNG1n5mc5GC4H+Pu3lM09UvVULgsVE0kwVxWjg1CxBke5vt7ttndFenYz5egtk3VUxzeAOfAQBKHcNTVw==",
+  "dgSpecHash": "o8MFy1ZGtsqvnrhndu0PdR8h4cMs6pa9UIuVqRDpQdZpqe5Z6AvJFzvSUR5PSkEic8VhuZ1cL9wapCN5hmZqgw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jakob\\Desktop\\Uppgift4\\Uppgift4\\TempSimulator\\TempClient.csproj",
+  "projectFilePath": "C:\\Users\\Jakob\\Desktop\\Datakommunikation och säkerhet\\Uppgift4\\TempSimulator\\TempClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jakob\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.11\\microsoft.aspnetcore.connections.abstractions.7.0.11.nupkg.sha512",
     "C:\\Users\\Jakob\\.nuget\\packages\\microsoft.aspnetcore.signalr.client.core\\7.0.11\\microsoft.aspnetcore.signalr.client.core.7.0.11.nupkg.sha512",

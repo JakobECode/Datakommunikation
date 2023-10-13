@@ -610,11 +610,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jakob\\Desktop\\Uppgift4\\Uppgift4\\TempSimulator\\TempClient.csproj",
+      "projectUniqueName": "C:\\Users\\Jakob\\Desktop\\Datakommunikation och säkerhet\\Uppgift4\\TempSimulator\\TempClient.csproj",
       "projectName": "TempClient",
-      "projectPath": "C:\\Users\\Jakob\\Desktop\\Uppgift4\\Uppgift4\\TempSimulator\\TempClient.csproj",
+      "projectPath": "C:\\Users\\Jakob\\Desktop\\Datakommunikation och säkerhet\\Uppgift4\\TempSimulator\\TempClient.csproj",
       "packagesPath": "C:\\Users\\Jakob\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jakob\\Desktop\\Uppgift4\\Uppgift4\\TempSimulator\\obj\\",
+      "outputPath": "C:\\Users\\Jakob\\Desktop\\Datakommunikation och säkerhet\\Uppgift4\\TempSimulator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

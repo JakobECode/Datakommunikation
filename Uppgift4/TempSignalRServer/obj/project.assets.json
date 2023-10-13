@@ -1578,11 +1578,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jakob\\Desktop\\Uppgift4\\Uppgift4\\TempSignalRServer\\TempSignalRServer.csproj",
+      "projectUniqueName": "C:\\Users\\Jakob\\Desktop\\Datakommunikation och säkerhet\\Uppgift4\\TempSignalRServer\\TempSignalRServer.csproj",
       "projectName": "TempSignalRServer",
-      "projectPath": "C:\\Users\\Jakob\\Desktop\\Uppgift4\\Uppgift4\\TempSignalRServer\\TempSignalRServer.csproj",
+      "projectPath": "C:\\Users\\Jakob\\Desktop\\Datakommunikation och säkerhet\\Uppgift4\\TempSignalRServer\\TempSignalRServer.csproj",
       "packagesPath": "C:\\Users\\Jakob\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jakob\\Desktop\\Uppgift4\\Uppgift4\\TempSignalRServer\\obj\\",
+      "outputPath": "C:\\Users\\Jakob\\Desktop\\Datakommunikation och säkerhet\\Uppgift4\\TempSignalRServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

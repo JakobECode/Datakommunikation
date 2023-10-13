@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "paDTmOLPi8c/t69nxJ3cVFLPh+4YGmC+6FDY+WvLihDX66Di9A+n74ivIxePV5ZZnk5fHxu8DSHZdRMh42AXRQ==",
+  "dgSpecHash": "eBcuQgR19R1Tcb+auMec8NfzWLzX5jsWaW7w2Yhc6et7TpNp9zT3jp9IzpxOwwui6/g2ZqoHGVXO2rM8lWd7HQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jakob\\Desktop\\Uppgift4\\Uppgift4\\TempSignalRServer\\TempSignalRServer.csproj",
+  "projectFilePath": "C:\\Users\\Jakob\\Desktop\\Datakommunikation och säkerhet\\Uppgift4\\TempSignalRServer\\TempSignalRServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jakob\\.nuget\\packages\\aspose.pdf\\23.9.0\\aspose.pdf.23.9.0.nupkg.sha512",
     "C:\\Users\\Jakob\\.nuget\\packages\\microsoft.aspnet.signalr.core\\2.4.3\\microsoft.aspnet.signalr.core.2.4.3.nupkg.sha512",

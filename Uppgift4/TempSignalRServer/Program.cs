@@ -12,11 +12,12 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors(options =>
 {
-	options.AddPolicy("MyAllowSpecificOrigins", builder =>
+	options.AddPolicy("_myAllowSpecificOrigins", builder =>
 	{
-		builder.WithOrigins("https://localhost:7045")
+		builder.WithOrigins("https://localhost:7247")
 					  .AllowAnyMethod()
-					  .AllowAnyHeader();
+					  .AllowAnyHeader()
+					  .AllowCredentials();
 	});
 });
 

@@ -1,93 +1,64 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 using System.Security.Cryptography;
-using System.Text;
+using System.Text.Json;
+using TempSignalRServer.Models;
 
 public class TemperatureHub : Hub
 {
-	// En logger används för att spåra och logga händelser eller fel.
-	private readonly ILogger<TemperatureHub> _logger;
-	private static readonly byte[] Key = {
+	static byte[] key = {
 		0x12, 0x34, 0x56, 0x78, 0x9A, 0xBC, 0xDE, 0xF0,
 		0x12, 0x34, 0x56, 0x78, 0x9A, 0xBC, 0xDE, 0xF0
-	};
+};
 
-	// Konstruktorn tar en ILogger som en beroende (injicerad av ASP.NET Core).
-	public TemperatureHub(ILogger<TemperatureHub> logger)
-	{
-		_logger = logger;
-	}
-
-	// En metod för att hämta krypteringsnyckeln. 
-	private byte[] GetEncryptionKey()
-	{
-		// Just nu returneras en hårdkodad nyckel, men denna metod kan senare anpassas 
-		// för att hämta nyckeln från en säker källa som en konfigurationslagring.
-		return new byte[]
-		{
-			// ... (nyckelvärden) ...
-		};
-	}
+	static byte[] iv = new byte[16]; // Initialization Vector. You can generate and store this if needed. 
+	
 
 	// Metoden som tar emot krypterad temperaturdata från en klient, dekrypterar den och 
 	// sänder den till alla anslutna klienter.
-	public async Task SendTemperatureData(string deviceId, string encryptedTemperature)
+	public async Task SendTemperatureData(string encryptedTemperature)
 	{
-		// Validera inmatningen för att försäkra att den inte är tom eller ogiltig.
-		if (string.IsNullOrWhiteSpace(deviceId) || string.IsNullOrWhiteSpace(encryptedTemperature))
-		{
-			_logger.LogWarning("Invalid input received in SendTemperatureData for device {DeviceId}.", deviceId);
-			return;
-		}
-
 		try
 		{
-			// Dekryptera temperaturen med den givna nyckeln.
-			//double temperature = DecryptTemperature(encryptedTemperature, Key);
+			string decryptedData = Decrypt(encryptedTemperature, key, iv);
 
-			// Skicka den dekrypterade temperaturen till alla anslutna klienter.
-			await Clients.All.SendAsync("PublishToClient", deviceId, encryptedTemperature);
+			WeatherForecast forecast = JsonSerializer.Deserialize<WeatherForecast>(decryptedData)!;
+
+			Console.WriteLine($"Received temperature forecast - Date: {forecast.Date}, Temperature: {forecast.TemperatureC}, Summary: {forecast.Summary} Jakob testar");
+
+			await Clients.All.SendAsync("ReceiveTempData", forecast);
 		}
 		catch (Exception ex)
 		{
-			// Om något går fel, logga felet och informera klienten.
-			_logger.LogError(ex, "Error occurred while sending temperature data for device {DeviceId}.", deviceId);
+			Console.WriteLine(ex.Message);
 		}
 	}
 
 	// En hjälpmetod som dekrypterar den krypterade temperaturen.
-	public double DecryptTemperature(string encryptedTemperature, byte[] key)
+	private string Decrypt(string encryptedText, byte[] key, byte[] iv)
 	{
 		try
 		{
-			// Skapa en AES-instans för dekryptering.
-			using (Aes aes = Aes.Create())
+			using (Aes aesAlg = Aes.Create())
 			{
-				aes.Key = key;
+				aesAlg.Key = key;
+				aesAlg.IV = iv;
 
-				// Dela upp den mottagna datasträngen i IV (Initialization Vector) och den krypterade delen.
-				byte[] fullBuffer = Convert.FromBase64String(encryptedTemperature);
-				byte[] iv = new byte[16];
-				byte[] encrypted = new byte[fullBuffer.Length - iv.Length];
+				ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
 
-				Buffer.BlockCopy(fullBuffer, 0, iv, 0, iv.Length);
-				Buffer.BlockCopy(fullBuffer, iv.Length, encrypted, 0, encrypted.Length);
-
-				aes.IV = iv;
-
-				// Utför själva dekrypteringsprocessen.
-				using (var decryptor = aes.CreateDecryptor(aes.Key, aes.IV))
+				using (MemoryStream ms = new MemoryStream(Convert.FromBase64String(encryptedText)))
+				using (CryptoStream cs = new CryptoStream(ms, decryptor, CryptoStreamMode.Read))
+				using (StreamReader sr = new StreamReader(cs))
 				{
-					byte[] decryptedTemperatureBytes = decryptor.TransformFinalBlock(encrypted, 0, encrypted.Length);
-					return Convert.ToDouble(Encoding.UTF8.GetString(decryptedTemperatureBytes));
+					return (sr.ReadToEnd());
 				}
 			}
 		}
 		catch (Exception ex)
 		{
-			// Om något går fel med dekrypteringsprocessen, logga felet och kasta ett nytt undantag.
-			_logger.LogError(ex, "Error occurred while decrypting temperature data.");
-			throw new InvalidOperationException("Failed to decrypt the temperature data.");
+			Console.WriteLine(ex.Message);
+			return (ex.Message);
 		}
+
 	}
 }
 
