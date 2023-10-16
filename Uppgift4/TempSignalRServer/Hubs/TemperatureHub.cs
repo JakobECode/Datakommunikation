@@ -15,7 +15,7 @@ public class TemperatureHub : Hub
 
 	// Metoden som tar emot krypterad temperaturdata från en klient, dekrypterar den och 
 	// sänder den till alla anslutna klienter.
-	public async Task SendTemperatureData(string encryptedTemperature)
+	public async Task ReceiveTemperatureData(string encryptedTemperature)
 	{
 		try
 		{

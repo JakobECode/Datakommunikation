@@ -3,6 +3,8 @@ using Newtonsoft.Json;
 using System;
 using System.Security.Cryptography;
 using System.Text;
+using System.IO;
+using System.Threading.Tasks;
 using TempGenerator;
 
 class Program
@@ -53,7 +55,7 @@ class Program
 			// Skickar den krypterade temperaturen till SignalR-servern.
 			try
 			{
-				await connection.SendAsync("SendTemperatureData", encryptedTemperature);
+				await connection.SendAsync("ReceiveTemperatureData", encryptedTemperature);
 				// Väntar i 5 sekunder innan nästa iteration av loopen.
 				await Task.Delay(5000);
 			}
